@@ -5,6 +5,9 @@ import {AiOutlineSearch} from 'react-icons/ai'
 import Video from '../../assets/maldivesVideo.mp4'
 
 function Hero() {
+    function handleSubmit(e){
+        e.preventDefault();
+    }
     return (
         <div className='hero'>
             <video autoPlay loop muted id='video'>
@@ -14,7 +17,7 @@ function Hero() {
             <div className="content">
                 <h1>First Class Travel</h1>
                 <h2>Top 1% Locations Worldwide</h2>
-                <form className="form">
+                <form className="form" onSubmit={handleSubmit}>
                     <div>
                         <input type="text" placeholder='Search Destinations' />
                     </div>
